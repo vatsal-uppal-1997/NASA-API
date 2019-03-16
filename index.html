@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Nasa API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -16,22 +17,24 @@
     <nav class="navbar navbar-light bg-light" id="nav">
         <a class="navbar-brand pl-3" href="#">Nasa API</a>
     </nav>
-    <div class="container h-75">
-        <div class="row h-100 justify-content-center align-items-center">
-            <form class="col">
-                <div class="form-group">
-                    <input type="text" class="form-control p-4 text-center font-weight-bold" id="formGroupExampleInput"
-                        placeholder="Search Here...">
-                </div>
-            </form>
-        </div>
-        <div class="row h-25 justify-content-center align-items-center">
-            <p class="col text-center" id="addIcon">Please Wait While The Background Loads</p>
+    <div class="container-fluid full-height" id="setBg">
+        <div class="container full-height">
+            <div class="row h-75 justify-content-center align-items-center">
+                <form class="col" onsubmit="return process('query')">
+                    <div class="form-group">
+                        <input type="text" class="form-control p-4 text-center font-weight-bold" id="query"
+                            placeholder="Search Here...">
+                    </div>
+                </form>
+            </div>
+            <div class="row h-25 justify-content-center align-items-center">
+                <p class="col text-center" id="addIcon">Please Wait While The Background Loads</p>
+            </div>
         </div>
     </div>
     <script src="./js/main.js"></script>
     <script>
-        loadBg('addIcon');
+        loadBg('setBg', 'addIcon');
     </script>
 </body>
 
